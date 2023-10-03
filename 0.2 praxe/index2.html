@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreslení čáry</title>
+</head>
+<body>
+    <label for="length">Jak dlouhou čáru chceš vykreslit?</label>
+    <input type="number" id="length">
+    <button onclick="drawLine()">Vykreslit</button>
+    <div id="line"></div>
+
+    <script>
+        function drawLine() {
+            let length = document.getElementById('length').value;
+            let line = '.'.repeat(length);
+            document.getElementById('line').textContent = line;
+        }
+    </script>
+</body>
+</html>

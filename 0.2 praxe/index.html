@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prvočísla do tisíce</title>
+</head>
+<body>
+    <button onclick="showPrimes()">Zobrazit prvočísla</button>
+    <div id="primes"></div>
+
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+        function showPrimes() {
+            let primes = [];
+            for (let i = 2; i <= 1000; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+            document.getElementById('primes').textContent = primes.join(', ');
+        
+        }
+    </script>
+</body>
+</html>

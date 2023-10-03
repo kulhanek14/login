@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Převod do dvojkové soustavy</title>
+</head>
+<body>
+    <label for="number">Zadej číslo:</label>
+    <input type="number" id="number">
+    <button onclick="convertToBinary()">Převést</button>
+    <div id="binary"></div>
+
+    <script>
+        function convertToBinary() {
+            let number = document.getElementById('number').value;
+            let binary = Number(number).toString(2);
+            document.getElementById('binary').textContent = binary;
+        }
+    </script>
+</body>
+</html>
